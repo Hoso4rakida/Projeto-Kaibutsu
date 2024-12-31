@@ -1,10 +1,11 @@
 modules = ["web"]
 run = "index.html"
+
 [nix]
 channel = "stable-24_05"
 
 [deployment]
-run = ["sh", "-c", "run"]
+run = ["http-server", "index.html"]
 
 [[ports]]
 localPort = 8080

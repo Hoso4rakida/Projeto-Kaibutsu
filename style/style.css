@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: black; /* cor de fundo */
+    background-image: url("logo.jpg"); /* Imagem de fundo */
+    background-size: 40%;  /* Tamanho da imagem */
+    background-position: 30vw 30vh; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    color: #ff6347;
+}
+Header {
+    display: flex; /* Alinha itens em linha */
+    justify-content: space-between; /* Espaça os itens para os lados */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+    position: fixed; /* Mantém o header fixo no topo */
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#ZZZ{
+    margin-top: 4em;
+    position: justify;
+}
+
+.special-elite-regular {
+  font-family: "Special Elite", serif;
+  font-weight: 400;
+  font-style: normal;
+}
