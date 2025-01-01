@@ -1,24 +1,31 @@
+/* Reset global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Special Elite", serif;
-    color: #ffffff;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    background-color: black;
+/* Variáveis CSS para reutilização */
+:root {
+    --primary-color: #ffffff;
+    --accent-color: #d40000;
+    --bg-color: black;
+    --notification-color: red;
 }
 
+/* Corpo do site */
+body {
+    font-family: "Special Elite", serif;
+    color: var(--primary-color);
+    font-weight: 400;
+    text-align: center;
+    background: var(--bg-color) url("gal-takahashi.png") no-repeat 150% center/contain fixed;
+}
+
+/* Navbar */
 .navbar-container {
     position: fixed;
     bottom: 30px;
-    /* Levanta a barra para cima */
     width: 99%;
     display: flex;
     justify-content: center;
@@ -27,51 +34,43 @@ body {
 .navbar-background {
     position: absolute;
     background-color: white;
-    /* Cor da camada de fundo */
     width: 100%;
     height: 120%;
-    /* Aumenta a altura da camada branca */
     clip-path: polygon(3% 100%, 0 0, 97% 0, 100% 100%);
-    /* Ajusta as pontas */
     z-index: 1;
     transform: translateY(-7%);
-    /* Levanta a camada branca */
 }
 
 .navbar-icons {
     display: flex;
     gap: 20px;
-    background-color: black;
-    /* Camada preta por cima */
+    background-color: var(--bg-color);
     padding: 10px;
     width: 99%;
-    /* Reduz o tamanho da camada preta */
     justify-content: space-around;
     clip-path: polygon(5% 100%, 2% 0, 95% 0, 98% 100%);
-    /* Ajusta as pontas para redução */
     z-index: 2;
     position: relative;
 }
 
 .navbar-icons a {
-    color: white;
+    color: var(--primary-color);
     text-decoration: none;
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .navbar-icons a:hover {
-    color: #d40000;
+    color: var(--accent-color);
 }
 
 .notification-badge {
     position: absolute;
     top: -5px;
     right: -10px;
-    background-color: red;
-    color: white;
+    background-color: var(--notification-color);
+    color: var(--primary-color);
     font-size: 12px;
     border-radius: 50%;
     padding: 2px 6px;
@@ -81,22 +80,51 @@ body {
     font-size: 24px;
 }
 
+/* Botão estilizado */
 button {
-    all: unset; /* Remove o estilo padrão */
-    cursor: pointer; /* Adiciona o cursor de clique */
-    width: 150px; /* Largura do botão */
-    height: 50px; /* Altura do botão */
-    background-color: white; /* Cor de fundo */
-    color: black; /* Cor do texto */
-    font-size: 16px; /* Tamanho do texto */
-    text-align: center; /* Centraliza o texto */
-    line-height: 50px; /* Centraliza verticalmente o texto */
-    border: none; /* Remove bordas extras */
-    clip-path: polygon(0% 10%, 90% 0%, 100% 90%, 10% 100%); /* Forma torta */
-    transition: transform 0.2s ease, background-color 0.2s ease; /* Animações */
+    all: unset;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    color: var(--bg-color);
+    font-size: 16px;
+    text-align: center;
+    line-height: 50px;
+    clip-path: polygon(0% 10%, 90% 0%, 100% 90%, 10% 100%);
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 button:hover {
-    background-color: lightgray; /* Cor ao passar o mouse */
-    transform: scale(1.05); /* Botão aumenta levemente */
+    background-color: lightgray;
+    transform: scale(1.05);
+}
+
+/* Elementos de seção */
+section {
+    line-height: 1.6;
+    margin: 20px;
+}
+
+/* Listas */
+ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Parágrafos */
+p {
+    margin: 10px 0;
+}
+
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+    body {
+        background: var(--bg-color) url("gal-takahashi.png") no-repeat right bottom/contain fixed;
+    }
 }
