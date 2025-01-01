@@ -3,22 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página Flask</title>
-    <link rel="stylesheet" href="style/style.css">
+    <meta name="description" content="Kaibutsu RPG - Sistema genérico inspirado em shonen e seinen">
+    <title>Kaibutsu RPG</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <header>
-        <div>Ola galera</div>
-        <div id="btn1">Botão 1</div>
-        <div id="btn2">Botão 2</div>
+    <header class="main-header">
+        <img src="style/kaibutsu.png" alt="Kaibutsu RPG" width="300">
     </header>
-    <div id="ZZZ" class = "special-elite-regular">
-        <h1>Teste 2</h1>
-        <h1>Teste 3</h1>
-        <h1>Teste 4</h1>
-    </div>
+
+    <main class="conteudo">
+        <p class="tagline">Um sistema genérico inspirado no melhor dos mundos shonen e seinen.</p>
+        
+        <br><br>
+
+        <section class="introducao">
+            <h2>Introdução</h2>
+            <br>
+            <p>
+                <strong>Kaibutsu</strong> é um sistema de RPG focado em ser genérico e adaptável, ideal para emular mundos fantasiosos
+                inspirados no estilo shonen ou seinen da cultura japonesa. Baseado no uso de <strong>2d6</strong>, o sistema é projetado
+                para ser simples, fácil de aprender e flexível, permitindo que os jogadores adaptem suas aventuras para diversos
+                tipos de narrativas e estilos de jogo.
+            </p>
+            <br>
+            <p>
+                Com um foco nas <strong>habilidades dos jogadores</strong>, o sistema também traz equilíbrio por meio de desvantagens, equipamentos
+                e regras opcionais, oferecendo uma base sólida para criar histórias emocionantes. A temática shonen fornece liberdade criativa,
+                mas nada impede que você explore cenários de outros gêneros com facilidade.
+            </p>
+        </section>
+
+        <br><br><br>
+
+        <section class="estrutura-manual">
+            <h2>Estrutura do Manual</h2>
+            <br>
+            <ul class="manual-topicos">
+                <li><strong>Mecânicas Básicas:</strong> Regras de testes, resolução de ações e combate.</li>
+                <br>
+                <li><strong>Criação de Personagens:</strong> Como distribuir atributos, escolher habilidades e desvantagens.</li>
+                <br>
+                <li><strong>Habilidades e Fraquezas:</strong> Listas detalhadas com exemplos de uso.</li>
+                <br>
+                <li><strong>Equipamentos:</strong> Sistema de armas, armaduras e itens diversos.</li>
+                <br>
+                <li><strong>Regras Opcionais:</strong> Sugestões para personalizar a experiência de jogo.</li>
+            </ul>
+        </section>
+
+        <br><br>
+    </main>
+
+
+    <button class="load-content" data-file="mecanicas.html" data-bg="bg-mecanicas">Mecânicas</button>
+    <button class="load-content" data-file="criacao.html" data-bg="bg-criacao">Criação</button>    
+    <button class="load-content" data-file="vantagens.html">habilidades</button>
+    <button class="load-content" data-file="desvantagens.html">Fraquezas</button>
+    <button class="load-content" data-file="equipamentos.html">Equipamentos</button>
+    <button class="load-content" data-file="opcionais.html">Opcionais</button>
+    
+
+    <!-- Espaço adicional para evitar sobreposição com a navbar -->
+    <br><br><br><br><br><br><br><br>
+
+    <nav class="navbar-container">
+        <div class="navbar-background"></div>
+        <div class="navbar-icons">
+            <a href="#atualizacoes" class="nav-item">
+                <i class="bi bi-house"></i>
+                <span>Atualizações</span>
+            </a>
+            <a href="#sistema" class="nav-item">
+                <i class="bi bi-bar-chart"></i>
+                <span>Sistema</span>
+            </a>
+            <a href="#fichas" class="nav-item">
+                <i class="bi bi-person"></i>
+                <span>Fichas</span>
+            </a>
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="changer.js"></script>
 </body>
 </html>
