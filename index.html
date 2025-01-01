@@ -15,12 +15,13 @@
 <body>
     <header class="main-header">
         <img src="style/kaibutsu.png" alt="Kaibutsu RPG" width="300">
-        <p class="tagline">Um sistema genérico inspirado no melhor dos mundos shonen e seinen.</p>
     </header>
 
-    <br><br>
-
     <main class="conteudo">
+        <p class="tagline">Um sistema genérico inspirado no melhor dos mundos shonen e seinen.</p>
+        
+        <br><br>
+
         <section class="introducao">
             <h2>Introdução</h2>
             <br>
@@ -44,13 +45,11 @@
             <h2>Estrutura do Manual</h2>
             <br>
             <ul class="manual-topicos">
-                <li><strong>Introdução:</strong> Apresentação do sistema, uso dos dados e o que esperar ao jogar Kaibutsu.</li>
+                <li><strong>Mecânicas Básicas:</strong> Regras de testes, resolução de ações e combate.</li>
                 <br>
                 <li><strong>Criação de Personagens:</strong> Como distribuir atributos, escolher habilidades e desvantagens.</li>
                 <br>
-                <li><strong>Mecânicas Básicas:</strong> Regras de testes, resolução de ações e combate.</li>
-                <br>
-                <li><strong>Vantagens e Desvantagens:</strong> Listas detalhadas com exemplos de uso.</li>
+                <li><strong>Habilidades e Fraquezas:</strong> Listas detalhadas com exemplos de uso.</li>
                 <br>
                 <li><strong>Equipamentos:</strong> Sistema de armas, armaduras e itens diversos.</li>
                 <br>
@@ -61,7 +60,14 @@
         <br><br>
     </main>
 
-    <button id="regrasB" class="btn-regras">Introdução</button>
+
+    <button class="load-content" data-file="mecanicas.html" data-bg="bg-mecanicas">Mecânicas</button>
+    <button class="load-content" data-file="criacao.html" data-bg="bg-criacao">Criação</button>    
+    <button class="load-content" data-file="vantagens.html">habilidades</button>
+    <button class="load-content" data-file="desvantagens.html">Fraquezas</button>
+    <button class="load-content" data-file="equipamentos.html">Equipamentos</button>
+    <button class="load-content" data-file="opcionais.html">Opcionais</button>
+    
 
     <!-- Espaço adicional para evitar sobreposição com a navbar -->
     <br><br><br><br><br><br><br><br>
@@ -85,5 +91,6 @@
     </nav>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="changer.js"></script>
 </body>
 </html>
