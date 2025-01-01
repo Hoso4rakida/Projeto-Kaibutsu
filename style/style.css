@@ -5,8 +5,10 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
+    font-family: "Special Elite", serif;
+    color: #ffffff;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -77,4 +79,24 @@ body {
 
 .icon {
     font-size: 24px;
+}
+
+button {
+    all: unset; /* Remove o estilo padrão */
+    cursor: pointer; /* Adiciona o cursor de clique */
+    width: 150px; /* Largura do botão */
+    height: 50px; /* Altura do botão */
+    background-color: white; /* Cor de fundo */
+    color: black; /* Cor do texto */
+    font-size: 16px; /* Tamanho do texto */
+    text-align: center; /* Centraliza o texto */
+    line-height: 50px; /* Centraliza verticalmente o texto */
+    border: none; /* Remove bordas extras */
+    clip-path: polygon(0% 10%, 90% 0%, 100% 90%, 10% 100%); /* Forma torta */
+    transition: transform 0.2s ease, background-color 0.2s ease; /* Animações */
+}
+
+button:hover {
+    background-color: lightgray; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Botão aumenta levemente */
 }
