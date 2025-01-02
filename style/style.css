@@ -19,7 +19,7 @@ body {
     color: var(--primary-color);
     font-weight: 400;
     text-align: justify;
-    background: var(--bg-color) url("gal-takahashi.png") no-repeat 150% center/contain fixed;
+    background: var(--bg-color) url("gal-takahashi.png") no-repeat right center/contain fixed;
 }
 
 /* Navbar */
@@ -128,4 +128,7 @@ p {
     body {
         background: var(--bg-color) url("gal-takahashi.png") no-repeat right bottom/contain fixed;
     }
+}
+header{
+    text-align: center;
 }
