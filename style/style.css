@@ -18,7 +18,7 @@ body {
     font-family: "Special Elite", serif;
     color: var(--primary-color);
     font-weight: 400;
-    text-align: center;
+    text-align: justify;
     background: var(--bg-color) url("gal-takahashi.png") no-repeat 150% center/contain fixed;
 }
 
