@@ -80,6 +80,12 @@ body {
     font-size: 24px;
 }
 
+.botoes{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; 
+}
+
 /* Botão estilizado */
 button {
     all: unset;
@@ -89,7 +95,7 @@ button {
     background-color: white;
     color: var(--bg-color);
     font-size: 16px;
-    text-align: justify;
+    text-align: center;
     line-height: 50px;
     clip-path: polygon(0% 10%, 90% 0%, 100% 90%, 10% 100%);
     transition: transform 0.2s ease, background-color 0.2s ease;
