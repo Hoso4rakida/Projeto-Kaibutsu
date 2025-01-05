@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
             main.innerHTML = data;
         } catch (error) {
             console.error(error);
-            main.innerHTML = "<p>Erro ao carregar o conteúdo. Tente novamente mais tarde.</p>";
+            main.innerHTML = "<p>Infelizmente ainda não esta pronta essa area</p>";
         }
     };
 

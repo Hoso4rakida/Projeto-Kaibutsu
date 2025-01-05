@@ -18,8 +18,8 @@ body {
     font-family: "Special Elite", serif;
     color: var(--primary-color);
     font-weight: 400;
-    text-align: center;
-    background: var(--bg-color) url("gal-takahashi.png") no-repeat 150% center/contain fixed;
+    text-align: justify;
+    background: var(--bg-color) url("gal-takahashi.png") no-repeat right center/contain fixed;
 }
 
 /* Navbar */
@@ -80,6 +80,12 @@ body {
     font-size: 24px;
 }
 
+.botoes{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; 
+}
+
 /* Botão estilizado */
 button {
     all: unset;
@@ -127,4 +133,8 @@ p {
     body {
         background: var(--bg-color) url("gal-takahashi.png") no-repeat right bottom/contain fixed;
     }
+}
+
+header {
+    text-align: center;
 }
