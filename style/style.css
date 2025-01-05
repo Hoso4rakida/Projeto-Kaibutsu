@@ -80,13 +80,14 @@ body {
     font-size: 24px;
 }
 
-.botoes{
+.botoes {
     display: flex;
-    justify-content: space-between;
-    gap: 10px; 
+    justify-content: space-evenly; /* Alinha os botões uniformemente */
+    flex-wrap: wrap; /* Permite que os botões desçam se não couberem na mesma linha */
+    row-gap: 5px; /* Espaçamento vertical entre as linhas de botões */
+    width: 100%;
 }
 
-/* Botão estilizado */
 button {
     all: unset;
     cursor: pointer;
@@ -99,7 +100,9 @@ button {
     line-height: 50px;
     clip-path: polygon(0% 10%, 90% 0%, 100% 90%, 10% 100%);
     transition: transform 0.2s ease, background-color 0.2s ease;
+    margin: 0; /* Adiciona um pequeno espaço ao redor de cada botão */
 }
+
 
 button:hover {
     background-color: lightgray;
@@ -138,3 +141,14 @@ p {
 header {
     text-align: center;
 }
+/*table{
+    background-color: white;
+    text-align: center;
+}
+thead{
+    position: sticky;
+    top: 0;
+}
+td{
+    border: 1px solid black;
+}*/
