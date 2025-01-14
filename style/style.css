@@ -1,4 +1,3 @@
-/* Reset global */
 * {
     margin: 0;
     padding: 0;
@@ -11,13 +10,6 @@
     --accent-color: #d40000;
     --bg-color: black;
     --notification-color: blue;
-}
-html, body {
-    height: 100%; /* Garante que o body preencha a altura total */
-    margin: 0;
-    padding: 0;
-    background-color: black; /* Fundo preto */
-    color: white; /* Texto branco para contraste */
 }
 
 /* Corpo do site */
@@ -165,7 +157,8 @@ header {
 }
 
 .Caixinha {
-    background-color: white !important; /* Fundo branco garantido */
+    background-color: white; /* Fundo branco */
+    color: black; /* Texto preto */
     padding: 20px 30px;
     max-width: 400px;
     text-align: center;
@@ -173,8 +166,7 @@ header {
     font-size: 1.2rem;
     line-height: 1.5;
     transform: rotate(-2deg); /* Deixa a caixa torta */
-    box-shadow: 5px 5px 0 #000, 10px 10px 0 rgba(0, 0, 0, 0.2); /* Ajuste a transparência */
+    box-shadow: 5px 5px 0 #000, 10px 10px 0 rgba(0, 0, 0, 0.2); /* Sombras */
     border: 2px solid #000; /* Borda preta */
     margin: auto; /* Centraliza horizontalmente */
 }
-
