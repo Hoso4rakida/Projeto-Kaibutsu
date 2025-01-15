@@ -136,6 +136,10 @@ p {
     background: var(--bg-color) url("Luan.png") no-repeat right fixed;
     background-size: contain;      
 }
+.bg-criacao{
+    background: var(--bg-color) url("ruby.png") no-repeat right fixed;
+    background-size: contain;      
+}
 
 /* Estilos responsivos para dispositivos móveis */
 @media (max-width: 768px) {
@@ -148,6 +152,10 @@ p {
     }
     .bg-vantagens{
         background: var(--bg-color) url("Luan.png") no-repeat right fixed;
+        background-size: cover;      
+    }
+    .bg-vantagens{
+        background: var(--bg-color) url("ruby.png") no-repeat right fixed;
         background-size: cover;      
     }
 }
