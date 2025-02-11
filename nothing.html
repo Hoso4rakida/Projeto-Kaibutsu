@@ -1,39 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kaibutsu RPG - Sistema genérico inspirado em shonen e seinen">
-    <title>Kaibutsu RPG</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="style/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kaibutsu RPG - Sistema genérico inspirado em shonen e seinen">
+  <title>Kaibutsu RPG</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+
+  <style>
+    /* Definindo o estilo para o botão de upload (id Ldai) */
+    #Ldai {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 16px;
+      text-align: center;
+      transition: background 0.3s;
+      overflow: hidden;
+    }
+
+    /* Esconde o input de arquivo */
+    #fileinput {
+      display: none;
+    }
+
+    /* Ajusta a imagem que será inserida dentro de #Ldai */
+    #Ldai img {
+        display: block;
+        width: 200px;
+        height: auto;
+        object-fit: fill;
+    }
+  </style>
 </head>
 <body>
   <br><br><br>
-  <h1>Ainda esta sendo feito</h1>
-    <nav class="navbar-container">
-        <div class="navbar-background"></div>
-        <div class="navbar-icons">
-            <a href="Atualiza.html" class="nav-item">
-                <i class="bi bi-house"></i>
-                <span>Atualizações</span>
-            </a>
-            <a href="index.html" class="nav-item">
-                <i class="bi bi-bar-chart"></i>
-                <span>Sistema</span>
-            </a>
-            <a href="nothing.html" class="nav-item">
-                <i class="bi bi-person"></i>
-                <span>Fichas</span>
-            </a>
-        </div>
-    </nav>
-    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="changer.js"></script>
+  
+  <!-- Div que atua como botão de upload -->
+  <div id="Ldai" class="Caixinha" onclick="document.getElementById('fileinput').click();">
+    Coloque sua imagem aqui
+  </div>
+  
+  <!-- Input de arquivo escondido -->
+  <input type="file" id="fileinput" accept="image/*" onchange="previewFile(event)">
+
+  <div id="vida">
+    <p>Vida: <input type="number" name="vida" id="vd"></p>
+  </div>
+  <div id="energia">
+    <p>Energia: <input type="number" name="energia" id="en"></p>
+  </div>
+<br>
+  <div id="fisico">
+    <p>Físico: <input type="number" name="fisico" id="fs"></p>
+  </div>
+  <div id="coracao">
+    <p>Coração: <input type="number" name="coracao" id="cr"></p>
+  </div>
+  <div id="mente">
+    <p>Mente: <input type="number" name="mente" id="mt"></p>
+  </div>
+  <div id="espirito">
+    <p>Espírito: <input type="number" name="espirito" id="ep"></p>
+  </div>
+
+  <br>
+ <!-- Informações uteis --> 
+  <div id="nome">
+    <p>Nome: <input type="text" name="nome" id="nm"></p>
+  </div>
+  <div id="pps">
+    <p>PPs: <input type="number" name="pps" id="pp"></p>
+  </div>
+  <div id="creditos">
+    <p>Créditos: <input type="number" name="creditos" id="cd"></p>
+  </div>
+
+  <br>
+  <!-- Informações caracteristicas -->
+<div id="pericias">
+  <ul>
+    <li>Perícias</li>
+    <li style="display: flex; align-items: center;">Atirar(F): <input type="checkbox" name="pericia1" id="p1"> <p id="Atirar" style="margin: 0 5px;">0</p></li>
+    <li style="display: flex; align-items: center;">Atletismo(F): <input type="checkbox" name="pericia2" id="p2"> <p id="Atletismo" style="margin: 0 5px;">0</p></li>
+    <li style="display: flex; align-items: center;">Combate(F): <input type="checkbox" name="pericia3" id="p3"> <p id="Combate" style="margin: 0 5px;">0</p></li>
+    <li style="display: flex; align-items: center;">Esquiva(F): <input type="checkbox" name="pericia4" id="p4"> <p id="Esquiva" style="margin: 0 5px;">0</p></li>
+    <li style="display: flex; align-items: center;">Furtividade(F): <input type="checkbox" name="pericia5" id="p5"> <p id="Furtividade" style="margin: 0 5px;">0</p></li>
+    <li style="display: flex; align-items: center;">Determinação(C): <input type="checkbox" name="pericia6" id="p6"> <p id="Determinacao" style="margin: 0 5px;">0</p></li>
+    <li style="display: flex; align-items: center;">Intuição(C): <input type="checkbox" name="pericia7" id="p7"> <p id="Intuição" style="margin: 0 5px;">0</p></li>
+    <li style="display: flex; align-items: center;">Resistência(C): <input type="checkbox" name="pericia8" id="p8"> <p id="Resistência" style="margin: 0 5px;">0</p></li>
+    <li style="display: flex; align-items: center;">Percepção(M): <input type="checkbox" name="pericia9" id="p9"> <p id="Percepcao" style="margin: 0 5px;">0</p></li>
+    <li style="display: flex; align-items: center;">Crime(M): <input type="checkbox" name="pericia10" id="p10"> <p id="Crime" style="margin: 0 5px;">0</p></li>
+    <li style="display: flex; align-items: center;">Ocultismo(M): <input type="checkbox" name="pericia11" id="p11"> <p id="Ocultismo" style="margin: 0 5px;">0</p></li>
+    <li style="display: flex; align-items: center;">Estratégia(M): <input type="checkbox" name="pericia12" id="p12"> <p id="Estrategia" style="margin: 0 5px;">0</p></li>
+    <li style="display: flex; align-items: center;">Tecnologia(M): <input type="checkbox" name="pericia13" id="p13"> <p id="Tecnologia" style="margin: 0 5px;">0</p></li>
+    <li style="display: flex; align-items: center;">Canalização(A): <input type="checkbox" name="pericia14" id="p14"> <p id="Canalização" style="margin: 0 5px;">0</p></li>
+    <li style="display: flex; align-items: center;">Diplomacia(A): <input type="checkbox" name="pericia15" id="p15"> <p id="Diplomacia" style="margin: 0 5px;">0</p></li>
+    <li style="display: flex; align-items: center;">Empatia(A): <input type="checkbox" name="pericia16" id="p16"> <p id="Empatia" style="margin: 0 5px;">0</p></li>
+  </ul>
+</div>
+
+  <div id="vantagens">
+    <p>vantagens</p>
+    <input type="text" name="vantagens" id="vt">
+  </div>
+  <div id="desvantagens">
+    <p>Desvantagens</p>
+    <input type="text" name="desvantagens" id="dv">
+  </div>
+  <div id="bolsa">
+    <p>Bolsa</p>
+    <input type="text" name="bolsa" id="bs">
+  </div>
+
+  <br><br><br><br>
+
+  <br><br><br>
+  <nav class="navbar-container">
+    <div class="navbar-background"></div>
+    <div class="navbar-icons">
+      <a href="Atualiza.html" class="nav-item">
+        <i class="bi bi-house"></i>
+        <span>Atualizações</span>
+      </a>
+      <a href="index.html" class="nav-item">
+        <i class="bi bi-bar-chart"></i>
+        <span>Sistema</span>
+      </a>
+      <a href="nothing.html" class="nav-item">
+        <i class="bi bi-person"></i>
+        <span>Fichas</span>
+      </a>
+    </div>
+  </nav>
+
+  <script>
+    function previewFile(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const uploadBox = document.getElementById('Ldai');
+          // Use template string (crases) para interpolar a URL da imagem
+          uploadBox.innerHTML = `<img src="${e.target.result}" alt="Imagem carregada">`;
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="changer.js"></script>
 </body>
 </html>
